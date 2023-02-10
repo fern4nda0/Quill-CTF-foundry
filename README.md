@@ -1,8 +1,7 @@
 ## 1 : Road Closed
 
-```
 “We keep out the wrong people – by letting anyone in.”
-```
+<br>
 
 <li>Objective of CTF </li>
 
