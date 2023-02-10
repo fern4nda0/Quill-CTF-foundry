@@ -6,7 +6,10 @@ git clone "https://github.com/niluk-256/Quill-CTF-foundry.git"
 forge install
 forge  test   --match-contract {contract} -vvvv
 
+
 ```
+
+---
 
 ## 1 : Road Closed ☑
 
@@ -89,3 +92,13 @@ forge test  --match-contract VIPBankExploit  -vvvv
 [Resource1 - Alchemy-SelfDestruct](https://www.alchemy.com/overviews/selfdestruct-solidity)
 
 ## 9 : WETH10 ❌
+
+---
+
+<br/>
+
+#### please open a PR on the repo if you wish to contribute💙 .
+
+#### Please only publish solutions for retired the challenges check here👇
+
+[quillCTF challenges](https://quillctf.super.site/challenges)
