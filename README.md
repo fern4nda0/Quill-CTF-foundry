@@ -1,4 +1,4 @@
-## 1 : Road Closed
+## 1 : Road Closed ☑
 
 “We keep out the wrong people – by letting anyone in.”
 <br>
@@ -25,3 +25,24 @@ forge test  --match-contract RoadAttackerWithContract -vvvv
 ```
 
 Even though there is ` isContract` .we can bypasss it because when we execute our logic inside of the constructor(Attacker contract) the code size is zero it won't be included in the runtime code.
+
+## 2 : Confidential Hash ☑
+
+<br>
+
+<li>Objective of CTF </li>
+
+```
+Find the keccak256 hash of aliceHash and bobHash.
+```
+
+test Exploit
+
+```bash
+
+forge test  --match-contract ConfidentialHashExploit  -vvv
+forge test  --match-contract ConfidentialHashExploit  -vvvv
+
+```
+
+## 9 : WETH10 ❌
