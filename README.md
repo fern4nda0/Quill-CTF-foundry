@@ -1,3 +1,13 @@
+## 0 : SetUp ▶
+
+```bash
+git clone "https://github.com/niluk-256/Quill-CTF-foundry.git"
+
+forge install
+forge  test   --match-contract {contract} -vvvv
+
+```
+
 ## 1 : Road Closed ☑
 
 “We keep out the wrong people – by letting anyone in.”
@@ -44,5 +54,38 @@ forge test  --match-contract ConfidentialHashExploit  -vvv
 forge test  --match-contract ConfidentialHashExploit  -vvvv
 
 ```
+
+```
+Never store sensitive information in
+contract because anyone access it from the storage.
+```
+
+#### Learning Resources
+
+[How to read ethereum contract storage](https://medium.com/@dariusdev/how-to-read-ethereum-contract-storage-44252c8af925)
+
+[Resource2 ](https://medium.com/coinmonks/hacking-secrets-in-ethereum-smart-contracts-646c638c395c)
+
+## 3 : VIP Bank ☑
+
+“This Bank is only for its VIP Customers.”
+
+<br>
+
+<li>Objective of CTF </li>
+
+```
+At any cost, lock the VIP user balance forever into the contract.
+```
+
+test Exploit
+
+```bash
+forge test  --match-contract VIPBankExploit  -vvvv
+```
+
+#### Learning Resources
+
+[Resource1 - Alchemy-SelfDestruct](https://www.alchemy.com/overviews/selfdestruct-solidity)
 
 ## 9 : WETH10 ❌

