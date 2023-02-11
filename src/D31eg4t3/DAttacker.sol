@@ -11,8 +11,8 @@ contract DAttacker {
     string private d;
     uint32 private c;
     string private mot;
-    address public owner;
-    mapping(address => bool) public canYouHackMe;
+    address public owner; //slot 5
+    mapping(address => bool) public canYouHackMe; //Slot 6
 
     function pwn(address _addr) external {
         owner = _addr;

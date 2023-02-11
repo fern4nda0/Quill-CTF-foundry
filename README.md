@@ -117,7 +117,8 @@ forge test  --match-contract SafeNftExploit  -vvvv
 
 #### Learning Resources
 
-[Resource1 -Walkthrough by Erhant](https://dev.to/erhant/quill-ctf-4-safe-nft-5699) <br/>
+[Resource0 -Walkthrough by Erhant](https://dev.to/erhant/quill-ctf-4-safe-nft-5699) <br/>
+[Resource1 -Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
 [Resource2 -Blocksec](https://blocksecteam.medium.com/when-safemint-becomes-unsafe-lessons-from-the-hypebears-security-incident-2965209bda2a)<br/>
 [Resource3 -Danger of surpisingcode samczsun](https://samczsun.com/the-dangers-of-surprising-code/)
 
@@ -148,7 +149,9 @@ address.
 
 [Resource Preservation Ethernauts](https://medium.com/coinmonks/ethernaut-lvl-16-preservation-walkthrough-how-to-inject-malicious-contracts-with-delegatecall-81e071f98a12)
 <br/>
-[Solidity Docs](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html?highlight=delegatecall)
+
+[Solidity Docs](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html?highlight=delegatecall) <br/>
+[Resource1 -Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
 
 ## 9 : WETH10 ❌
 
