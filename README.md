@@ -151,7 +151,8 @@ address.
 <br/>
 
 [Solidity Docs](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html?highlight=delegatecall) <br/>
-[Resource1 -Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
+[Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
+[Walkthrough by Erhan Tezcan](https://dev.to/erhant/quillctf-5-d31eg4t3-37h3) <br/>
 
 ## 9 : WETH10 ❌
 
