@@ -121,6 +121,34 @@ forge test  --match-contract SafeNftExploit  -vvvv
 [Resource2 -Blocksec](https://blocksecteam.medium.com/when-safemint-becomes-unsafe-lessons-from-the-hypebears-security-incident-2965209bda2a)<br/>
 [Resource3 -Danger of surpisingcode samczsun](https://samczsun.com/the-dangers-of-surprising-code/)
 
+## 5 : D31eg4t3 ☑ 🟢
+
+This CTF challenge is developed to showcase the <br/>
+vulnerability which can be introduced by using delegatecall() incorrectly.
+
+“Handle with care, It’s D31eg4t3”
+
+<br>
+
+<li>Objective of CTF </li>
+
+```
+Become the owner of the contract.
+Make canYouHackMe mapping to true for your own
+address.
+```
+
+`Attack vector: Delegatecall`
+
+```bash
+ forge test  --match-contract DExploit  -vvvv
+```
+
+#### Learning Resources
+
+[Resource Preservation Ethernauts](https://medium.com/coinmonks/ethernaut-lvl-16-preservation-walkthrough-how-to-inject-malicious-contracts-with-delegatecall-81e071f98a12)
+[Solidity Docs](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html?highlight=delegatecall)
+
 ## 9 : WETH10 ❌
 
 ---
