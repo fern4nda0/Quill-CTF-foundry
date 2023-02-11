@@ -16,6 +16,7 @@ contract DAttacker {
 
     function pwn(address _addr) external {
         owner = _addr;
+        canYouHackMe[_addr] = true;
     }
 
     function attack(address _Daddress, address _wojak) external {

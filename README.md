@@ -147,6 +147,7 @@ address.
 #### Learning Resources
 
 [Resource Preservation Ethernauts](https://medium.com/coinmonks/ethernaut-lvl-16-preservation-walkthrough-how-to-inject-malicious-contracts-with-delegatecall-81e071f98a12)
+<br/>
 [Solidity Docs](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html?highlight=delegatecall)
 
 ## 9 : WETH10 ❌
