@@ -154,6 +154,18 @@ address.
 [Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
 [Walkthrough by Erhan Tezcan](https://dev.to/erhant/quillctf-5-d31eg4t3-37h3) <br/>
 
+## 6 :Collatz Puzzle 🔴
+
+“It's a puzzle I'll keep trying because it's so much fun.”
+<br>
+
+<li>Objective of CTF </li>
+
+```
+Make a successful call to the callMe function.
+You should be the deployer of the contract at the given addr parameter!
+```
+
 ## 9 : WETH10 ❌
 
 ---
