@@ -154,7 +154,7 @@ address.
 [Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
 [Walkthrough by Erhan Tezcan](https://dev.to/erhant/quillctf-5-d31eg4t3-37h3) <br/>
 
-## 6 :Collatz Puzzle 🔴
+## 6 :Collatz Puzzle 🔴 ❎
 
 “It's a puzzle I'll keep trying because it's so much fun.”
 <br>
@@ -166,7 +166,29 @@ Make a successful call to the callMe function.
 You should be the deployer of the contract at the given addr parameter!
 ```
 
-## 9 : WETH10 ❌
+## 8. Pelusa ❎
+
+## 9 : WETH10 ☑ 🟡
+
+```
+bob deposit  1 ether gets a Token
+      Aproved himself
+      transfer that Token to his bobcontract so now his bob contract has 1 token
+      bob call callWithdrawAll then ..we can withdraw 1 ether,  to our Attacker Contract ... before going to _burnAll() (WETH10 Line 29) we gonna
+        send those tokens to bob's EOA  ..repeat it 10 times, we withdraw all the ether in bobContract then  finally we withdraw the rest (1 remaining ether) by directly calling  withdrawAll function in WETH10
+
+```
+
+![image info](./img/w10.png)
+
+
+
+### Learning Resources
+
+Credits viking71 for explaining this level 
+https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4
+
+
 
 ---
 

