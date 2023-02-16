@@ -181,6 +181,9 @@ bob deposit  1 ether gets a Token
 
 ![image info](./img/w10.png)
 
+```bash
+forge test  --match-contract WETHAttack  -vvvv
+```
 
 
 ### Learning Resources
