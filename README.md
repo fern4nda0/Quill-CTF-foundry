@@ -170,6 +170,17 @@ You should be the deployer of the contract at the given addr parameter!
 
 ## 9 : WETH10 ☑ 🟡
 
+<br>
+
+<li>Objective of CTF </li>
+
+```
+The contract currently has 10 ethers. (Check the Foundry configuration.)
+You are Bob (the White Hat). Your job is to rescue all the funds from the contract, starting with 1 ether, in only one transaction.
+
+
+```
+
 ```
 bob deposit  1 ether gets a Token
       Aproved himself
