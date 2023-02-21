@@ -166,6 +166,27 @@ Make a successful call to the callMe function.
 You should be the deployer of the contract at the given addr parameter!
 ```
 
+## 6 : True XOR ☑ 🟡
+
+<br>
+<li>Objective of CTF </li>
+
+```
+Make a successful call to the `callMe` function.
+The given `target` parameter should belong to a contract deployed by you and should use `IBoolGiver` interface.
+
+```
+
+```bash
+forge test  --match-contract TrueXORTest  -vvvv
+```
+
+### Learning Resources
+
+[Ethernauts level 18 Magic Number](https://www.youtube.com/watch?v=FsPWuKK8mWI)<br/>
+[Deconstructing a Solidity Contract ](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) <br/>
+[viking71](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4)
+
 ## 8. Pelusa ❎
 
 ## 9 : WETH10 ☑ 🟡
@@ -196,13 +217,10 @@ bob deposit  1 ether gets a Token
 forge test  --match-contract WETHAttack  -vvvv
 ```
 
-
 ### Learning Resources
 
-Credits viking71 for explaining this level 
+Credits viking71 for explaining this level
 https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4
-
-
 
 ---
 
