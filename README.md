@@ -6,8 +6,9 @@ git clone "https://github.com/niluk-256/Quill-CTF-foundry.git"
 forge install
 forge  test   --match-contract {contract} -vvvv
 
-
 ```
+
+
 
 | Level  | Description |
 | ------ | ----------- |
@@ -16,6 +17,20 @@ forge  test   --match-contract {contract} -vvvv
 | Hard   | 🔴          |
 
 ---
+
+!["challenges"](./img/c.PNG)
+
+
+```bash
+Method 2 
+ you can use 
+yarn c1
+yarn c2 
+etc...
+to  test challenges 
+
+
+```
 
 ## 1 : Road Closed ☑ 🟢
 
@@ -154,7 +169,7 @@ address.
 [Walkthrough by Vishnuram Rajkumar](https://infosecwriteups.com/quillaudit-ctf-challenges-writeups-fd5d38f010a4) <br/>
 [Walkthrough by Erhan Tezcan](https://dev.to/erhant/quillctf-5-d31eg4t3-37h3) <br/>
 
-## 6 :Collatz Puzzle 🔴 ❎
+## 6 :Collatz Puzzle 🔴 ☑
 
 “It's a puzzle I'll keep trying because it's so much fun.”
 <br>
@@ -164,6 +179,9 @@ address.
 ```
 Make a successful call to the callMe function.
 You should be the deployer of the contract at the given addr parameter!
+```
+```bash
+ forge test --match-contract    CollatzExploit  -vv
 ```
 
 ## 6 : True XOR ☑ 🟡

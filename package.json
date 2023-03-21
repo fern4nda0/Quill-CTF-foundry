@@ -1,0 +1,32 @@
+{
+  "name": "quilctf",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "c1simple": "forge test --match-contract    RoadAttackerSimple -vvvv",
+    "c1": "forge test --match-contract    RoadAttackWithContract -vvvv",
+    "c2": "forge test --match-contract    ConfidentialHashExploit -vvvv",
+    "c3": "forge test --match-contract    VIPBankExploit -vvvv",
+    "c4": "forge test --match-contract    SafeNftExploit -vvvv",
+    "c5": "forge test --match-contract    DExploit -vvvv",
+    "c6": "forge test --match-contract    CollatzExploit -vv",
+    "c7": "forge test --match-contract    TrueXORTest -vvvv",
+    "c8": "forge test --match-contract    DExploit -vvvv",
+    "c9": "forge test --match-contract    WETHAttack -vvvv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niluk-256/Quill-CTF-foundry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niluk-256/Quill-CTF-foundry/issues"
+  },
+  "homepage": "https://github.com/niluk-256/Quill-CTF-foundry#readme"
+}
