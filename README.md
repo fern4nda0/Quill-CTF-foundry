@@ -184,7 +184,7 @@ You should be the deployer of the contract at the given addr parameter!
  forge test --match-contract    CollatzExploit  -vv
 ```
 
-## 6 : True XOR ☑ 🟡
+##  : True XOR ☑ 🟡
 
 <br>
 <li>Objective of CTF </li>
